@@ -1,11 +1,32 @@
-# ZORO — standalone HTML/CSS/JS app
+# ZORO AI Chrome Extension
 
-This is a regular web project. It has no Chrome extension manifest, `chrome.*` APIs, or browser storage. The API key remains in JavaScript memory and is cleared when the page closes or reloads.
+An AI Chrome extension that lets you ask questions and get streamed answers.
 
-## Run it
+## Features
 
-Open `index.html` in a modern browser. For the most reliable browser permissions and API requests, serve this folder from a local development server (for example, VS Code Live Server).
+- Chat in Chrome’s side panel
+- Stream answers from Groq
+- Open the chat in a full browser tab
+- Keep the Groq API key on the local server
 
-Click **CONNECT AI**, paste an OpenAI API key, and choose **USE THIS KEY**. The key is sent from the browser to OpenAI for live requests, so use this only for a personal prototype. A public deployment should send requests through a backend that keeps the key secret. Without a key, the app shows sample answers in demo mode.
+## Requirements
 
-Files: `index.html`, `style.css`, and `app.js`.
+- Google Chrome with side panel support3
+- Node.js 20 or newer
+- A Groq API key
+
+## Setup
+
+1. Clone the repository and open its folder in a terminal.
+2. Install the server dependencies:
+
+   ```sh
+   npm install
+3.Copy .env.example to .env and add your Groq API key:
+   GROQ_API_KEY=your_groq_api_key
+  GROQ_MODEL=openai/gpt-oss-20b
+  PORT=3000
+4.Start the local server:
+  npm start
+5.In Chrome, open chrome://extensions, enable Developer mode, select Load unpacked, and choose the project folder.
+6.Click the ZORO extension icon to open the side panel. Keep the local server running while using AI answers.
