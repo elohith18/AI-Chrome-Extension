@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0b">
+  <title>ZORO — AI Sidekick</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cosmic-bg" aria-hidden="true"></div>
+
+  <header>
+    <a class="brand" href="#"><b>⫸</b> ZORO<span>.</span></a>
+    <div class="status"><i></i> GROQ LIVE</div>
+    <button class="open-tab" id="openTab" type="button" hidden>
+      OPEN FULL TAB ↗
+    </button>
+  </header>
+
+  <main class="app-shell">
+    <section class="chat-shell" aria-label="Zoro chat">
+      <div class="chat-topline">
+        <div><span class="online-dot"></span> MEET ZORO</div>
+        <span>READY WHEN YOU ARE</span>
+      </div>
+
+      <div
+        class="conversation"
+        id="conversation"
+        aria-live="polite"
+        aria-label="Conversation"
+      >
+        <div class="welcome" id="welcome">
+          <div class="welcome-orb"><span>Z</span><i></i><b></b></div>
+          <p class="eyebrow">THINK AT LIGHTSPEED</p>
+          <h1>What’s on<br>your mind<span>?</span></h1>
+          <p class="welcome-copy">
+            Ask anything. Get a clear answer and keep moving.
+          </p>
+
+          <div class="chips" aria-label="Suggested questions">
+            <button data-q="Explain this like I'm new to it">
+              Explain simply <b>↗</b>
+            </button>
+            <button data-q="Give me three creative ideas for a hackathon project">
+              Spark ideas <b>↗</b>
+            </button>
+            <button data-q="Summarize the key points in a concise checklist">
+              Quick summary <b>↗</b>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="notice" class="notice" role="status" hidden></div>
+
+      <form class="composer" id="composer">
+        <label class="sr-only" for="question">Your message</label>
+        <textarea
+          id="question"
+          rows="1"
+          maxlength="4000"
+          placeholder="Message Zoro…"
+          aria-label="Your message"
+        ></textarea>
+        <div class="composer-foot">
+          <span id="count">0 / 4000 · Enter to send</span>
+          <button
+            class="send"
+            id="ask"
+            type="submit"
+            aria-label="Send message"
+          >↑</button>
+        </div>
+      </form>
+
+      <p class="privacy-note">
+        ZORO CAN MAKE MISTAKES · KEEP YOUR CURIOSITY ON
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

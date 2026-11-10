@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ZORO AI Sidekick",
+  "version": "1.0.0",
+  "description": "Ask Zoro questions from a fast, animated Chrome side panel.",
+  "permissions": ["sidePanel"],
+  "host_permissions": ["http://127.0.0.1:3000/*"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Open ZORO AI Sidekick"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  }
+}
